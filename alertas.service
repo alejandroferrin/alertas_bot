@@ -1,0 +1,14 @@
+[Unit]
+Description=Service to feed a telegram channel
+
+[Service]
+WorkingDirectory=/home/alex/alertas
+ExecStart=/bin/bash start.sh
+User=alex
+Type=simple
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+
